@@ -29,7 +29,7 @@ gulp.task('stylus', function() {
         .on('error', gp.notify.onError({title: 'style'}))
         .pipe(gp.csso())
         .pipe(gp.sourcemaps.write())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/styles'))
         .pipe(browserSync.reload({
             stream:true
         }));
