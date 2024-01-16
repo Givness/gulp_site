@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Популярное оружие</title>
+    <link rel="stylesheet" href="table.css">
+  </head>
+  <body>
+    <header></header>
+    <h2>Популярное оружие</h2>
+  </body>
+  <nav><a href="index.html">Главная</a><a class="active" href="popular.html">Популярное оружие</a>
+  </nav>
+  <article> 
+    <section>
+      <form>
+        <details>
+          <summary>График</summary>
+          <p>Значение по оси ОХ<br>
+            <label>
+              <input type="radio" name="quest_2" value="2_1">
+            </label>Тип<br>
+            <label>
+              <input type="radio" name="quest_2" value="2_2">
+            </label>Страна<br>
+            <label>
+              <input type="radio" name="quest_2" value="2_3">
+            </label>Год
+          </p>
+          <p>Результат<br>
+            <label></label>
+            <input type="checkbox" name="quest_1" value="1_1">Максимальная масса<br>
+            <label></label>
+            <input type="checkbox" name="quest_1" value="1_2">Минимальная масса<br>
+            <label></label>
+            <input type="checkbox" name="quest_1" value="1_3">Максимальный калибр<br>
+            <label></label>
+            <input type="checkbox" name="quest_1" value="1_3">Минимальный калибр
+          </p>
+          <p>
+            <input type="submit" value="Построить">
+          </p>
+          <p>Место для графика</p>
+        </details>
+        <details>
+          <summary>Фильтр</summary>
+          <p>Тип
+            <input type="text" name="quest_3" min="0" max="450">
+          </p>
+          <p>Страна
+            <input type="text" name="quest_3" min="0" max="450">
+          </p>
+          <p>Год от
+            <input type="number" name="quest_3" min="0" max="450">до
+            <input type="number" name="quest_3" min="0" max="450">
+          </p>
+          <p>Калибр от
+            <input type="number" name="quest_3" min="0" max="450">до
+            <input type="number" name="quest_3" min="0" max="450">
+          </p>
+          <p>Масса от
+            <input type="number" name="quest_3" min="0" max="450">до
+            <input type="number" name="quest_3" min="0" max="450">
+          </p>
+          <p>
+            <input type="submit" value="Найти">
+          </p>
+        </details>
+        <details>
+          <summary>Сортировка</summary>
+          <p>Первый уровень
+            <select name="Sort">
+              <option value="0">Нет</option>
+              <option value="1" selected>По названию</option>
+              <option value="2" selected>По типу</option>
+              <option value="3" selected>По стране</option>
+              <option value="4">По году разработки</option>
+              <option value="5">По калибру</option>
+              <option value="6">По массе</option>
+            </select>по убыванию?
+            <input type="checkbox" name="var" value="0">
+          </p>
+          <p>Второй уровень
+            <select name="Sort">
+              <option value="0">Нет</option>
+              <option value="1" selected>По названию</option>
+              <option value="2" selected>По типу</option>
+              <option value="3" selected>По стране</option>
+              <option value="4">По году разработки</option>
+              <option value="5">По калибру</option>
+              <option value="6">По массе</option>
+            </select>по убыванию?
+            <input type="checkbox" name="var" value="0">
+          </p>
+          <p>Третий уровень
+            <select name="Sort">
+              <option value="0">Нет</option>
+              <option value="1" selected>По названию</option>
+              <option value="2" selected>По типу</option>
+              <option value="3" selected>По стране</option>
+              <option value="4">По году разработки</option>
+              <option value="5">По калибру</option>
+              <option value="6">По массе</option>
+            </select>по убыванию?
+            <input type="checkbox" name="var" value="0">
+          </p>
+        </details>
+      </form>
+      <table border="1" cellspacing="0">
+        <thead align="center">
+          <tr>
+            <td>Название</td>
+            <td>Тип</td>
+            <td>Страна</td>
+            <td>Год разработки</td>
+            <td>Калибр</td>
+            <td>Масса</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>СПС «Гюрза»</td>
+            <td>Пистолет</td>
+            <td>Россия</td>
+            <td>1996</td>
+            <td>9</td>
+            <td>0,9</td>
+          </tr>
+          <tr>
+            <td>ПЯ «Грач»</td>
+            <td>Пистолет</td>
+            <td>Россия</td>
+            <td>2000</td>
+            <td>9</td>
+            <td>0,95</td>
+          </tr>
+          <tr>
+            <td>FN Five-seveN</td>
+            <td>Пистолет</td>
+            <td>Бельгия</td>
+            <td>1998</td>
+            <td>5,7</td>
+            <td>0,61</td>
+          </tr>
+          <tr>
+            <td>Beretta Px4 Storm</td>
+            <td>Пистолет</td>
+            <td>Италия</td>
+            <td>2004</td>
+            <td>9</td>
+            <td>0,79</td>
+          </tr>
+          <tr>
+            <td>Glock 17</td>
+            <td>Пистолет</td>
+            <td>Австрия</td>
+            <td>1982</td>
+            <td>9</td>
+            <td>0,625</td>
+          </tr>
+          <tr>
+            <td>Mauser HSc mod.90T</td>
+            <td>Пистолет</td>
+            <td>Германия</td>
+            <td>2005</td>
+            <td>10</td>
+            <td>0,6</td>
+          </tr>
+          <tr>
+            <td>Streamer 1014</td>
+            <td>Пистолет</td>
+            <td>Турция</td>
+            <td>2014</td>
+            <td>9</td>
+            <td>0,63</td>
+          </tr>
+          <tr>
+            <td>Desert Eagle</td>
+            <td>Пистолет</td>
+            <td>Израиль</td>
+            <td>1983</td>
+            <td>12,7</td>
+            <td>1,7</td>
+          </tr>
+          <tr>
+            <td>ОЦ-38</td>
+            <td>Револьвер</td>
+            <td>Россия</td>
+            <td>2002</td>
+            <td>7,62</td>
+            <td>0,82</td>
+          </tr>
+          <tr>
+            <td>Р-92</td>
+            <td>Револьвер</td>
+            <td>Россия</td>
+            <td>1991</td>
+            <td>9</td>
+            <td>0,52</td>
+          </tr>
+          <tr>
+            <td>Colt Anaconda</td>
+            <td>Револьвер</td>
+            <td>США</td>
+            <td>1990</td>
+            <td>10,9</td>
+            <td>1,5</td>
+          </tr>
+          <tr>
+            <td>Smith &amp; Wesson Model 500</td>
+            <td>Револьвер</td>
+            <td>США</td>
+            <td>2003</td>
+            <td>12,7</td>
+            <td>1,6</td>
+          </tr>
+          <tr>
+            <td>Ратник</td>
+            <td>Револьвер</td>
+            <td>Россия</td>
+            <td>2006</td>
+            <td>13</td>
+            <td>0,5</td>
+          </tr>
+          <tr>
+            <td>Mateba MTR-8</td>
+            <td>Револьвер</td>
+            <td>Италия</td>
+            <td>1980</td>
+            <td>9,1</td>
+            <td>1,23</td>
+          </tr>
+          <tr>
+            <td>ПП-91 &quot;Кедр&quot;</td>
+            <td>ПП</td>
+            <td>Россия</td>
+            <td>1990</td>
+            <td>9</td>
+            <td>1,54</td>
+          </tr>
+          <tr>
+            <td>ОЦ-02 «Кипарис»</td>
+            <td>ПП</td>
+            <td>СССР</td>
+            <td>1972</td>
+            <td>9</td>
+            <td>1,6</td>
+          </tr>
+          <tr>
+            <td>Kriss Super V</td>
+            <td>ПП</td>
+            <td>США</td>
+            <td>2006</td>
+            <td>11,51</td>
+            <td>2,5</td>
+          </tr>
+          <tr>
+            <td>HK MP7</td>
+            <td>ПП</td>
+            <td>Германия</td>
+            <td>2001</td>
+            <td>4,6</td>
+            <td>1,8</td>
+          </tr>
+          <tr>
+            <td>Cz Scorpion EVO 3 A1</td>
+            <td>ПП</td>
+            <td>Чехия</td>
+            <td>2009</td>
+            <td>9</td>
+            <td>2,77</td>
+          </tr>
+          <tr>
+            <td>АК-47</td>
+            <td>Автомат</td>
+            <td>Россия</td>
+            <td>1947</td>
+            <td>7,62</td>
+            <td>3,8</td>
+          </tr>
+          <tr>
+            <td>АК-74</td>
+            <td>Автомат</td>
+            <td>Россия</td>
+            <td>1974</td>
+            <td>5,45</td>
+            <td>3,3</td>
+          </tr>
+          <tr>
+            <td>M16</td>
+            <td>Автомат</td>
+            <td>США</td>
+            <td>1956</td>
+            <td>5,56</td>
+            <td>2,88</td>
+          </tr>
+          <tr>
+            <td>АДС</td>
+            <td>Автомат</td>
+            <td>Россия</td>
+            <td>2009</td>
+            <td>5,45</td>
+            <td>4,6</td>
+          </tr>
+          <tr>
+            <td>АС «Вал»</td>
+            <td>Автомат</td>
+            <td>Россия</td>
+            <td>1987</td>
+            <td>9</td>
+            <td>2,5</td>
+          </tr>
+          <tr>
+            <td>FN SCAR</td>
+            <td>Автомат</td>
+            <td>Бельгия</td>
+            <td>2003</td>
+            <td>5,56</td>
+            <td>3,5</td>
+          </tr>
+          <tr>
+            <td>FX-05 Xiuhcoatl</td>
+            <td>Автомат</td>
+            <td>Мексика</td>
+            <td>2005</td>
+            <td>5,56</td>
+            <td>3,89</td>
+          </tr>
+          <tr>
+            <td>Двустволка</td>
+            <td>Ружьё</td>
+            <td>Франция</td>
+            <td>1738</td>
+            <td>12</td>
+            <td>3,5</td>
+          </tr>
+          <tr>
+            <td>Mossberg 500</td>
+            <td>Ружьё</td>
+            <td>США</td>
+            <td>1960</td>
+            <td>12</td>
+            <td>3,3</td>
+          </tr>
+          <tr>
+            <td>Сайга</td>
+            <td>Карабин</td>
+            <td>Россия</td>
+            <td>1970</td>
+            <td>12</td>
+            <td>3,6</td>
+          </tr>
+          <tr>
+            <td>ВСС «Винторез»</td>
+            <td>Снайперская винтовка</td>
+            <td>СССР</td>
+            <td>1987</td>
+            <td>9</td>
+            <td>2,6</td>
+          </tr>
+          <tr>
+            <td>Barrett M98B</td>
+            <td>Снайперская винтовка</td>
+            <td>США</td>
+            <td>2008</td>
+            <td>8,6</td>
+            <td>6,12</td>
+          </tr>
+          <tr>
+            <td>Barrett M82</td>
+            <td>Снайперская винтовка</td>
+            <td>США</td>
+            <td>1980</td>
+            <td>12,7</td>
+            <td>13,5</td>
+          </tr>
+          <tr>
+            <td>СВД</td>
+            <td>Снайперская винтовка</td>
+            <td>СССР</td>
+            <td>1963</td>
+            <td>7,62</td>
+            <td>4,3</td>
+          </tr>
+          <tr>
+            <td>РПК-74</td>
+            <td>Ручной пулемёт</td>
+            <td>СССР</td>
+            <td>1974</td>
+            <td>7,62</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Mark 48</td>
+            <td>Ручной пулемёт</td>
+            <td>Бельгия</td>
+            <td>2003</td>
+            <td>7,62</td>
+            <td>8,2</td>
+          </tr>
+          <tr>
+            <td>HK MG4</td>
+            <td>Ручной пулемёт</td>
+            <td>Германия</td>
+            <td>2000</td>
+            <td>5,56</td>
+            <td>8,15</td>
+          </tr>
+          <tr>
+            <td>HK MG5</td>
+            <td>Ручной пулемёт</td>
+            <td>Германия</td>
+            <td>2009</td>
+            <td>7,62</td>
+            <td>10,1</td>
+          </tr>
+          <tr>
+            <td>ПКП «Печенег»</td>
+            <td>Ручной пулемёт</td>
+            <td>Россия</td>
+            <td>1995</td>
+            <td>7,62</td>
+            <td>8,2</td>
+          </tr>
+          <tr>
+            <td>M240</td>
+            <td>Ручной пулемёт</td>
+            <td>Бельгия</td>
+            <td>1956</td>
+            <td>7,62</td>
+            <td>12,29</td>
+          </tr>
+          <tr>
+            <td>ГП-34</td>
+            <td>Гранатомёт</td>
+            <td>Россия</td>
+            <td>2000</td>
+            <td>40</td>
+            <td>1,4</td>
+          </tr>
+          <tr>
+            <td>M320</td>
+            <td>Гранатомёт</td>
+            <td>Германия</td>
+            <td>2008</td>
+            <td>40</td>
+            <td>1,5</td>
+          </tr>
+          <tr>
+            <td>АГС-40</td>
+            <td>Гранатомёт</td>
+            <td>Россия</td>
+            <td>1990</td>
+            <td>40</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>Mk 47 Striker</td>
+            <td>Гранатомёт</td>
+            <td>США</td>
+            <td>2000</td>
+            <td>40</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>РГ-6</td>
+            <td>Гранатомёт</td>
+            <td>Россия</td>
+            <td>1993</td>
+            <td>40</td>
+            <td>5,6</td>
+          </tr>
+          <tr>
+            <td>ГМ-94</td>
+            <td>Гранатомёт</td>
+            <td>Россия</td>
+            <td>1990</td>
+            <td>43</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>XM-25</td>
+            <td>Гранатомёт</td>
+            <td>США</td>
+            <td>2010</td>
+            <td>25</td>
+            <td>6,35</td>
+          </tr>
+          <tr>
+            <td>PAW-20 Neopup</td>
+            <td>Гранатомёт</td>
+            <td>ЮАР</td>
+            <td>2006</td>
+            <td>20</td>
+            <td>6,2</td>
+          </tr>
+          <tr>
+            <td>РПГ-7</td>
+            <td>Гранатомёт</td>
+            <td>СССР</td>
+            <td>1961</td>
+            <td>40</td>
+            <td>6,3</td>
+          </tr>
+          <tr>
+            <td>РПГ-28</td>
+            <td>Гранатомёт</td>
+            <td>Россия</td>
+            <td>2007</td>
+            <td>125</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>LAW 80</td>
+            <td>Гранатомёт</td>
+            <td>Англия</td>
+            <td>1983</td>
+            <td>94</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </article>
+  <footer>
+    <h4>&copy; Ермак В.М., Б9121-09.03.04, 2023-2024</h4>
+  </footer>
+</html>

@@ -1,0 +1,150 @@
+extends _template
+block variables
+    include _tablevalues
+    - var title = 'Популярное оружие'
+    - var styl = 'table.css'
+
+    -
+        var dictMenu = { 'Главная': 'index.html',
+        'Популярное оружие' : 'popular.html'
+        }
+block menu
+    +createMenu(dictMenu, title)
+block content
+    article 
+        section
+            form
+                details
+                    summary График
+                    p Значение по оси ОХ
+                        br
+                        label
+                            input(type="radio", name="quest_2", value="2_1")
+                        | Тип
+                        br
+                        label
+                            input(type="radio", name="quest_2", value="2_2")
+                        | Страна
+                        br
+                        label
+                            input(type="radio", name="quest_2", value="2_3")
+                        | Год
+                    p
+                        | Результат
+                        br
+                        label
+                        input(type="checkbox", name="quest_1", value="1_1")
+                        | Максимальная масса
+                        br
+                        label
+                        input(type="checkbox", name="quest_1", value="1_2")
+                        | Минимальная масса
+                        br
+                        label
+                        input(type="checkbox", name="quest_1", value="1_3")
+                        | Максимальный калибр
+                        br
+                        label
+                        input(type="checkbox", name="quest_1", value="1_3")
+                        | Минимальный калибр
+                    p
+                        input(type="submit", value="Построить")
+                    p Место для графика
+                details
+                    summary Фильтр
+                    p
+                        | Тип
+                        input(type="text", name="quest_3", min="0", max="450")
+                    p
+                        | Страна
+                        input(type="text", name="quest_3", min="0", max="450")
+                    p
+                        | Год от
+                        input(type="number", name="quest_3", min="0", max="450")
+                        | до
+                        input(type="number", name="quest_3", min="0", max="450")
+                    p
+                        | Калибр от
+                        input(type="number", name="quest_3", min="0", max="450")
+                        | до
+                        input(type="number", name="quest_3", min="0", max="450")
+                    p
+                        | Масса от
+                        input(type="number", name="quest_3", min="0", max="450")
+                        | до
+                        input(type="number", name="quest_3", min="0", max="450")
+                    p
+                        input(type="submit", value="Найти")
+                details
+                    summary Сортировка
+                    p
+                        | Первый уровень
+                        select(name="Sort")
+                            option(value="0")
+                                | Нет
+                            option(value="1", selected)
+                                | По названию
+                            option(value="2", selected)
+                                | По типу
+                            option(value="3", selected)
+                                | По стране
+                            option(value="4")
+                                | По году разработки
+                            option(value="5")
+                                | По калибру
+                            option(value="6")
+                                | По массе
+                        | по убыванию?
+                        input(type="checkbox", name="var", value="0")
+                    p
+                        | Второй уровень
+                        select(name="Sort")
+                            option(value="0")
+                                | Нет
+                            option(value="1", selected)
+                                | По названию
+                            option(value="2", selected)
+                                | По типу
+                            option(value="3", selected)
+                                | По стране
+                            option(value="4")
+                                | По году разработки
+                            option(value="5")
+                                | По калибру
+                            option(value="6")
+                                | По массе
+                        | по убыванию?
+                        input(type="checkbox", name="var", value="0")
+                    p
+                        | Третий уровень
+                        select(name="Sort")
+                            option(value="0")
+                                | Нет
+                            option(value="1", selected)
+                                | По названию
+                            option(value="2", selected)
+                                | По типу
+                            option(value="3", selected)
+                                | По стране
+                            option(value="4")
+                                | По году разработки
+                            option(value="5")
+                                | По калибру
+                            option(value="6")
+                                | По массе
+                        | по убыванию?
+                        input(type="checkbox", name="var", value="0")
+            table(border='1', cellspacing='0')
+                thead(align="center")
+                    tr
+                        td Название
+                        td Тип
+                        td Страна
+                        td Год разработки
+                        td Калибр
+                        td Масса
+                tbody
+                    each i in tableValues
+                        tr
+                            each j in i
+                                td= j

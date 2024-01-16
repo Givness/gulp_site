@@ -1,0 +1,30 @@
+block variables
+
+mixin createMenu(menu, active)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key
+        else
+            a(href= value)= key
+
+mixin createArticleList(sections)
+    each item in sections
+        section
+            h2= item.header
+            img(src= "img/" + item.image)
+            p= item.text
+                    a(href="#") &hellip;
+
+doctype html
+html(lang="ru")
+    head
+        title #{title}
+        link(rel="stylesheet", href=styl)
+    body
+        header
+        h2= title
+    nav
+        block menu
+    block content
+    footer
+        h4 &copy; Ермак В.М., Б9121-09.03.04, 2023-2024

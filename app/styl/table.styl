@@ -1,0 +1,55 @@
+back(size, color)
+    background-color color
+    box-shadow 4px 5px 10px rgba(0, 0, 0, 0.4)
+    padding size + "%"
+    margin 0 0 1% 0
+    border-radius 5px
+
+activeColor = khaki
+
+html
+    color colorText
+
+body
+    background-color silver
+
+nav
+    back(0, gray)
+    text-align right
+    & a
+        display inline-block
+        padding 1%
+        color white
+        text-decoration none
+        margin 0 1vw
+        &:hover
+        &.active
+            background-color activeColor
+            color black
+            border-radius 5px
+
+article
+    width 70%
+    margin auto
+    display grid
+    grid-gap 4%
+    & section
+        display grid
+        align-items center
+        back(2, #f1f1f1)
+        overflow-x auto
+
+thead
+    background-color: silver
+
+tr
+    &:nth-child(even)
+        background-color: rgb(236, 234, 214)
+    &:hover
+        background-color activeColor
+
+footer
+    back(0, rgb(80, 80, 80))
+    & h4
+        padding 5px
+        color #f8f8f8

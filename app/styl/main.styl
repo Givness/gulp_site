@@ -1,0 +1,83 @@
+back(size, color)
+    background-color color
+    box-shadow 4px 5px 10px rgba(0, 0, 0, 0.4)
+    padding: size + "%"
+    margin 0 0 1% 0
+    border-radius 5px
+
+colorText = black
+activeColor = khaki
+
+html
+    color colorText
+
+body
+    background-color silver
+
+nav
+    back(0, gray)
+    text-align right
+    & a
+        display inline-block
+        padding 1%
+        color white
+        text-decoration: none
+        margin: 0 1vw
+        &:hover
+        &.active
+            background-color activeColor
+            color black
+            border-radius 5px
+
+div.images
+    display grid
+    grid-template-columns repeat(5, 1fr)
+    grid-gap 0.5%
+    back(1, #f1f1f1)
+    width 80%
+    margin 1% auto
+    padding 1%
+    & img
+        width: 100%
+        &:hover
+            transition .2s;
+            transform scale(1.1)   
+            box-shadow 0px 0px 15px rgba(0, 0, 0, 0.4)
+    @media screen and (max-width: 600px)
+        grid-template-columns 1fr
+        grid-gap 0
+        & img
+            width 100%
+            margin 1% auto
+
+article
+    width 80%
+    margin auto
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    grid-gap 4%
+    & section
+        display grid
+        align-items center
+        back(2, #f1f1f1)
+        & h2
+            margin 0
+            text-align center
+        & img
+            width: 50%
+            margin: 0 auto
+        & p
+            margin: 0 5%
+        &:hover
+            transition .2s
+            background-color activeColor
+    @media screen and (max-width: 600px)
+        grid-template-columns 1fr
+        grid-gap 0
+        grid-template-rows 1fr 1fr 1fr
+
+footer
+    back(0, rgb(80, 80, 80))
+    & h4
+        padding 5px
+        color #f8f8f8
